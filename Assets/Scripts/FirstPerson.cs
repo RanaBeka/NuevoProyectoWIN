@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FirstPerson : MonoBehaviour
 {
+    [SerializeField] private float vidas;
+    
+
     [Header("Deteccion Suelo")]
     [SerializeField] private Transform pies;
     [SerializeField] private float radioDeteccion;
@@ -14,7 +17,7 @@ public class FirstPerson : MonoBehaviour
     CharacterController controller;
     [SerializeField] float escalaGravedad;
     [SerializeField] private float alturaSalto;
-   
+
     private Vector3 movimientoVertical;
     // Start is called before the first frame update
     void Start()
@@ -74,5 +77,14 @@ public class FirstPerson : MonoBehaviour
         Gizmos.color = new Color(204, 0, 153);
         Gizmos.DrawSphere(pies.position, radioDeteccion);
     }
+    private bool EnSuelo()
+    {
+        bool resultado = Physics.CheckSphere(pies.position, radioDeteccion, queEsSuelo);
+        return resultado;
 
+    }
+    private void RecibirDanho(float danhoRecibido)
+    {
+        vidas -= danhoRecibido;
+    }
 }
