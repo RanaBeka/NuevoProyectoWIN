@@ -43,7 +43,7 @@ public class Enemigo : MonoBehaviour
         {
             for (int i = 0; i < collsDetectados.Length; i++)
             {
-                collsDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
+                ///collsDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
             }
             danhoRealizado = true;
         }
