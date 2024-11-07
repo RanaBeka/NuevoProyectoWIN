@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Enemigo : MonoBehaviour
 {
-    
+    [SerializeField] private float vidas;
     [SerializeField] private float danhoAtaque;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float radioAtaque;
@@ -72,5 +72,14 @@ public class Enemigo : MonoBehaviour
     private void CerrarVentanaAtaque()
     {
         ventanaAbierta = false;
+    }
+    public void RecibirDanho(float danhoRecibido)
+    {
+        vidas -= danhoRecibido;
+
+        if (vidas <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
