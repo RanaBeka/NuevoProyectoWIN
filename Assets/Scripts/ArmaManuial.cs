@@ -25,7 +25,7 @@ public class ArmaManuial : MonoBehaviour
             {
                 Debug.Log(hitInfo.transform);
 
-                hitInfo.transform.GetComponent<Enemigo>().RecibirDanho(misDatos.danhoAtaque);
+                hitInfo.transform.GetComponent<ParteDeEnemigo>().RecibirDanho(misDatos.danhoAtaque);
             }
         }
     }
