@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemigoPrefab, puntosSpawn, Quaternion.identity);
+        ///Instantiate(enemigoPrefab, puntosSpawn, Quaternion.identity);
     }
 
    
