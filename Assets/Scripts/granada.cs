@@ -26,7 +26,7 @@ public class granada : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+       /// Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         
 
        Collider[] collsDetectadps = Physics.OverlapSphere(transform.position, radioExplosion, queEsDanhable);

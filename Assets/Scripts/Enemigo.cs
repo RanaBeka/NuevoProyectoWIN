@@ -57,10 +57,11 @@ public class Enemigo : MonoBehaviour
     {
         agent.SetDestination(player.transform.position);
 
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             agent.isStopped = true;
             anim.SetBool("attacking", true);
+            EnfocarPlayer();
         }
     }
     private void FinAtaque()
@@ -92,5 +93,11 @@ public class Enemigo : MonoBehaviour
         {
             huesos[i].isKinematic = estado;
         }
+    }
+
+    private void EnfocarPlayer()
+    {
+        Vector3 direccionAPlayer = (player.transform.position - this.gameObject.transform.position).normalized;
+        Quaternion.LookRotation(direccionAPlayer);
     }
 }
