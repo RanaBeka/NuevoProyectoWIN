@@ -25,7 +25,7 @@ public class Enemigo : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        GetComponentsInChildren<Rigidbody>();
+        huesos = GetComponentsInChildren<Rigidbody>();
         player = GameObject.FindObjectOfType<FirstPerson>();
 
         CambiarEstadoHuesos(true);
@@ -48,7 +48,7 @@ public class Enemigo : MonoBehaviour
         {
             for (int i = 0; i < collsDetectados.Length; i++)
             {
-                ///collsDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
+                collsDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
             }
             danhoRealizado = true;
         }

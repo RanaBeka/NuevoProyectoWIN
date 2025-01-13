@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponHolder : MonoBehaviour
 {
+    [SerializeField] private GameObject[] armas;
+    int indiceArmaActual = 0;   
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,11 @@ public class WeaponHolder : MonoBehaviour
         
         if (scrollWheel > 0)
         {
-            ///CambiarArma(indiceArmaActual - 1);
+            CambiarArma(indiceArmaActual - 1);
         }
         else if (scrollWheel < 0)
         {
-            ///CambiarArma(indiceArmaActual + 1);
+            CambiarArma(indiceArmaActual + 1);
         }
 
     }
@@ -42,27 +44,20 @@ public class WeaponHolder : MonoBehaviour
         {
             CambiarArma(1);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            CambiarArma(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
-        {
-            CambiarArma(3);
-        }
+        
     }
 
     private void CambiarArma(int nuevoIndice)
     {
-        ///armas[indiceArmaActual] = nuevoIndice;
+        
 
-        ///if(nuevoIndice >= 0 && nuevoIndice < armas.Length)
+        if(nuevoIndice >= 0 && nuevoIndice < armas.Length)
         {
-            ///armas[indiceArmaActual].SetActive(false);
+            armas[indiceArmaActual].SetActive(false);
 
-            ///indiceArmaActual = nuevoIndice;
+            indiceArmaActual = nuevoIndice;
 
-            ///armas[indiceArmaActual].SetActive(true);
+            armas[indiceArmaActual].SetActive(true);
         }
     }
 }

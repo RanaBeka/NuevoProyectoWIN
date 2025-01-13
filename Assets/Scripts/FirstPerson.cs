@@ -83,7 +83,7 @@ public class FirstPerson : MonoBehaviour
         return resultado;
 
     }
-    private void RecibirDanho(float danhoRecibido)
+    public void RecibirDanho(float danhoRecibido)
     {
         vidas -= danhoRecibido;
     }
