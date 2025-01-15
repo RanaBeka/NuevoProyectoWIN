@@ -5,6 +5,7 @@ using UnityEngine;
 public class CajaMunicion : MonoBehaviour
 {
     private Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,21 @@ public class CajaMunicion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+    }
+    public void cerrada()
+    {
+        anim.SetTrigger("cerrada");
     }
     public void abrir()
     {
-        anim.SetTrigger("abrir");
+        anim.SetTrigger("Abrir");
+        
+        
+    }
+    public void cerrar()
+    {
+        anim.SetTrigger("Cerrar");
+        
     }
 }

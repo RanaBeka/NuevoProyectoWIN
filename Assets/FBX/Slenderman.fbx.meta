@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 73521337defd1794f9078ba584050dba
+guid: a6a4f1b810b51dd45817dd98b28d12b4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Body
-    second: {fileID: 2100000, guid: 85dc04ee7a1e943428897fdbbaf2f592, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shoes
-    second: {fileID: 2100000, guid: 9adbeba625031e646a4f892870e90bad, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Suit
-    second: {fileID: 2100000, guid: eb0f7bdb03a0b3f488275133de97b366, type: 2}
+      name: Tex_0666_0_dds
+    second: {fileID: 2100000, guid: f156d15fcf6fae6459c0e0ca8fe05759, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

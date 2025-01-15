@@ -12,8 +12,18 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ///Instantiate(enemigoPrefab, puntosSpawn, Quaternion.identity);
+        StartCoroutine(SpawnEnemigos());
     }
 
-   
+    private IEnumerator SpawnEnemigos()
+    {
+        while (true)
+        {
+            Enemigo slenderman = Instantiate(enemigoPrefab, puntosSpawn[Random.Range(0, puntosSpawn.Length)].position, Quaternion.identity);
+            yield return new WaitForSeconds(22);
+
+        }
+
+
+    }
 }

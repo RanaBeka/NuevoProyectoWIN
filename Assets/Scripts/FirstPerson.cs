@@ -14,7 +14,8 @@ public class FirstPerson : MonoBehaviour
 
     [Header("Movimiento")]
     [SerializeField] private float velocidadMovimiento;
-    CharacterController controller;
+    private CharacterController controller;
+    private Camera cam;
     [SerializeField] float escalaGravedad;
     [SerializeField] private float alturaSalto;
 
@@ -23,6 +24,9 @@ public class FirstPerson : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        
+        cam = Camera.main;
     }
 
     // Update is called once per frame
