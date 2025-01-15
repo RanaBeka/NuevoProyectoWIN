@@ -47,10 +47,13 @@ public class Enemigo : MonoBehaviour
         Collider[] collsDetectados = Physics.OverlapSphere(attackPoint.position, radioAtaque, queEsDanhable);
         if (collsDetectados.Length > 0 )
         {
+            Debug.Log("1");
             for (int i = 0; i < collsDetectados.Length; i++)
             {
                 collsDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
+                Debug.Log("2");
             }
+            Debug.Log("3");
             danhoRealizado = true;
         }
     }

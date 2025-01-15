@@ -6,7 +6,7 @@ public class ArmaManuial : MonoBehaviour
 {
     [SerializeField] private ArmaSO misDatos;
     [SerializeField] private ParticleSystem system;
-
+    public AudioSource aud;
     private Camera cam;
     
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class ArmaManuial : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            ReproducirSonido(aud.clip);
             system.Play();
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
             {
@@ -28,5 +29,9 @@ public class ArmaManuial : MonoBehaviour
                 hitInfo.transform.GetComponent<ParteDeEnemigo>().RecibirDanho(misDatos.danhoAtaque);
             }
         }
+    }
+    private void ReproducirSonido(AudioClip clip)
+    {
+        aud.PlayOneShot(clip);
     }
 }

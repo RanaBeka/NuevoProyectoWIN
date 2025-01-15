@@ -8,12 +8,12 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] private float vidas;
     
 
-    [Header("Deteccion Suelo")]
+    
     [SerializeField] private Transform pies;
     [SerializeField] private float radioDeteccion;
     [SerializeField] private LayerMask queEsSuelo;
 
-    [Header("Movimiento")]
+    
     [SerializeField] private float velocidadMovimiento;
     private CharacterController controller;
     private Camera cam;
