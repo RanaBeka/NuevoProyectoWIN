@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pistola
   m_EditorClassIdentifier: 
   balasCargador: 7
-  balasBolsa: 0
-  distanciaAtaque: 0
-  danhoAtaque: 0
-  cadenciaAtaque: 0
+  balasBolsa: 60
+  distanciaAtaque: 500
+  danhoAtaque: 20
+  cadenciaAtaque: 1.5

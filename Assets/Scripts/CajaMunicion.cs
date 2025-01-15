@@ -15,7 +15,7 @@ public class CajaMunicion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
     public void cerrada()
     {
@@ -23,13 +23,12 @@ public class CajaMunicion : MonoBehaviour
     }
     public void abrir()
     {
-        anim.SetTrigger("Abrir");
-        
+        anim.SetTrigger("abrir");
         
     }
     public void cerrar()
     {
-        anim.SetTrigger("Cerrar");
+        anim.SetTrigger("cerrar");
         
     }
 }

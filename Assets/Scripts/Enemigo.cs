@@ -78,6 +78,7 @@ public class Enemigo : MonoBehaviour
     private void CerrarVentanaAtaque()
     {
         ventanaAbierta = false;
+        FinAtaque();
     }
     public void Morir()
     {

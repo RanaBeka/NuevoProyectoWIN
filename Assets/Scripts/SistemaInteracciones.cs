@@ -1,23 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SistemaInteracciones : MonoBehaviour
 {
     private Camera cam;
     [SerializeField] private float distanciaInteraccion;
     [SerializeField] private Transform interactuableActual;
-    private bool abierto = false;
-
+    private bool interactuado = false;
+    public int coleccionable;
     void Start()
     {
         cam = Camera.main;
-
+        
     }
     void Update()
     {
-
+        if (coleccionable >= 3)
+        {
+            SceneManager.LoadScene(2);
+        }
 
 
 
@@ -25,20 +31,33 @@ public class SistemaInteracciones : MonoBehaviour
         {
             if (hit.transform.TryGetComponent(out CajaMunicion scriptCaja))
             {
+                if (hit.transform.CompareTag("Coleccionable"))
+                {
+                    Recoger();
+                }
                 interactuableActual = hit.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
 
-                if (Input.GetKeyDown(KeyCode.E) && abierto == false)
+                if (Input.GetKeyDown(KeyCode.E) && interactuado == false)
                 {
-                    scriptCaja.abrir();
+                    
+                   
+                         scriptCaja.abrir();
+                    
 
-                    abierto = true;
+
+
+
+
+
+
+                    interactuado = true;
 
                 }
-                else if (Input.GetKeyDown(KeyCode.E) && abierto == true)
+                else if (Input.GetKeyDown(KeyCode.E) && interactuado == true)
                 {
                     scriptCaja.cerrar();
-                    abierto = false;
+                    interactuado = false;
                 }
             }
 
@@ -50,7 +69,30 @@ public class SistemaInteracciones : MonoBehaviour
 
         }
 
+        
+               
+                
+            
 
+        
     }
 
+    private void Recoger()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, distanciaInteraccion))
+            {
+                if (hit.transform.CompareTag("Coleccionable"))
+                {
+                        coleccionable++;
+                    GameObject objetointeract = hit.collider.gameObject;
+                    Destroy(objetointeract);
+                    }
+            }
+        }
+
+            
+    }
 }
+

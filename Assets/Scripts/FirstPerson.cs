@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstPerson : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class FirstPerson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         
@@ -90,5 +92,10 @@ public class FirstPerson : MonoBehaviour
     public void RecibirDanho(float danhoRecibido)
     {
         vidas -= danhoRecibido;
+        if(vidas <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
+
 }

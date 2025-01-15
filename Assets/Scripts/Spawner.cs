@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(22);
 
         }
-
-
+        
+        
     }
 }
