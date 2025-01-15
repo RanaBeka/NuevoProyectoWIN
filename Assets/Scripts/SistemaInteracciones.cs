@@ -22,6 +22,7 @@ public class SistemaInteracciones : MonoBehaviour
     {
         if (coleccionable >= 3)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
         }
 

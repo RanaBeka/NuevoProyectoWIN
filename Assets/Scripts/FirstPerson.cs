@@ -95,6 +95,7 @@ public class FirstPerson : MonoBehaviour
         vidas -= DanhoRecibido;
         if(vidas <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(3);
         }
     }
