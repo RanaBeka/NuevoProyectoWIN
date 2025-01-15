@@ -19,6 +19,7 @@ public class Enemigo : MonoBehaviour
     private Rigidbody[] huesos;
 
     public float Vidas { get => vidas; set => vidas = value; }
+    public float DanhoAtaque { get => danhoAtaque; set => danhoAtaque = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -100,5 +101,10 @@ public class Enemigo : MonoBehaviour
     {
         Vector3 direccionAPlayer = (player.transform.position - this.gameObject.transform.position).normalized;
         Quaternion.LookRotation(direccionAPlayer);
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(204, 0, 153);
+        Gizmos.DrawSphere(attackPoint.position, radioAtaque);
     }
 }

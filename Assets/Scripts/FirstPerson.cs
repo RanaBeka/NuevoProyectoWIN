@@ -89,9 +89,10 @@ public class FirstPerson : MonoBehaviour
         return resultado;
 
     }
-    public void RecibirDanho(float danhoRecibido)
+    public void RecibirDanho(float DanhoRecibido)
     {
-        vidas -= danhoRecibido;
+       
+        vidas -= DanhoRecibido;
         if(vidas <= 0)
         {
             SceneManager.LoadScene(3);

@@ -145,6 +145,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -171.15565
       objectReference: {fileID: 0}
+    - target: {fileID: 242115650062574643, guid: 9cfb90d00518ac44a841247bc58937c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 242115650062574643, guid: 9cfb90d00518ac44a841247bc58937c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 242115650062574643, guid: 9cfb90d00518ac44a841247bc58937c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 415540872067553509, guid: 9cfb90d00518ac44a841247bc58937c7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 415540872067553509, guid: 9cfb90d00518ac44a841247bc58937c7,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 454858008829231972, guid: 9cfb90d00518ac44a841247bc58937c7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -514,6 +539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.7895203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633445737332124850, guid: 9cfb90d00518ac44a841247bc58937c7,
+        type: 3}
+      propertyPath: radioAtaque
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7307010123386153909, guid: 9cfb90d00518ac44a841247bc58937c7,
         type: 3}
@@ -12117,7 +12147,7 @@ GameObject:
   - component: {fileID: 4644498365363227117}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12412,7 +12442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d26b96d54dd44f438d8416e4d38a2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidas: 0
+  vidas: 5
   pies: {fileID: 1099301246}
   radioDeteccion: 0.5
   queEsSuelo:
